@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Enterprise Analytics</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Enterprise Analytics</h1>
+      <p>Revenue, orders and margin across regions and products, 2026</p>
+    </div>
+    <div class="filters">
+      <label>Region<select id="fRegion"></select></label>
+      <label>Product<select id="fProduct"></select></label>
+    </div>
+  </header>
+
+  <section class="kpis" id="kpis" aria-label="Key metrics"></section>
+
+  <section class="grid">
+    <div class="panel"><h2>Monthly revenue</h2><div id="trend"></div></div>
+    <div class="panel"><h2>Revenue by region</h2><div id="bars"></div></div>
+  </section>
+
+  <section class="panel">
+    <h2>Product performance</h2>
+    <div class="scroll"><table id="tbl"><thead></thead><tbody></tbody></table></div>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+:root{--bg:#eef1f5;--panel:#fff;--ink:#1b2430;--mute:#5d6a7a;--line:#d9dfe7;--a:#0f766e;--b:#c9861a;--bad:#b42318;
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141a22;--panel:#1c242e;--ink:#e8edf3;--mute:#9aa7b6;--line:#2d3844;--a:#3cc4b6;--b:#e3a94a;--bad:#f0877d}}
+:root[data-theme="dark"]{--bg:#141a22;--panel:#1c242e;--ink:#e8edf3;--mute:#9aa7b6;--line:#2d3844;--a:#3cc4b6;--b:#e3a94a;--bad:#f0877d}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.5 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:24px 16px 48px}
+header{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:end;margin-bottom:20px}
+h1{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em}
+header p{margin:2px 0 0;color:var(--mute)}
+.filters{display:flex;gap:10px;flex-wrap:wrap}
+label{display:flex;flex-direction:column;font-size:13px;color:var(--mute);gap:3px}
+select{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:7px 10px;min-width:150px}
+:focus-visible{outline:2px solid var(--a);outline-offset:2px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:12px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px}
+.kpi .v{font-size:28px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.kpi .l{color:var(--mute);font-size:13px}
+.kpi .d{font-size:13px;font-variant-numeric:tabular-nums}
+.up{color:var(--a)}.down{color:var(--bad)}
+.grid{display:grid;grid-template-columns:3fr 2fr;gap:12px;margin-bottom:12px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}
+h2{font-size:15px;font-weight:600;margin:0 0 10px}
+svg{width:100%;height:auto;display:block;overflow:visible}
+svg text{fill:var(--mute);font:12px "IBM Plex Sans",system-ui,sans-serif}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th,td{padding:9px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{font-weight:500;color:var(--mute);font-size:13px;cursor:pointer;user-select:none}
+th[aria-sort]{color:var(--ink)}
+tbody tr:last-child td{border-bottom:0}
